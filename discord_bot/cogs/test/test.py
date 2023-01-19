@@ -11,6 +11,10 @@ class Test(commands.Cog):
     async def test(self, interaction: discord.Interaction):
         await interaction.response.send_message("Успешно!")
 
+    @app_commands.command(name="ping", description="Ping!")
+    async def ping(self, interaction: discord.Interaction):
+        await interaction.response.send_message("Pong!")
+
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(Test(bot))
