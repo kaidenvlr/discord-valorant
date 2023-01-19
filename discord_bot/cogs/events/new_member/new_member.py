@@ -13,5 +13,5 @@ class Welcome(commands.Cog):
             await channel.send('+1 на сервере, {0.mention}.'.format(member))
 
 
-def setup(bot):
-    bot.add_cog(Welcome(bot))
+async def setup(bot):
+    await bot.add_cog(Welcome(bot))
