@@ -1,3 +1,5 @@
+import datetime
+
 import discord
 from discord.ext import commands
 
@@ -5,15 +7,20 @@ from discord_bot.config import load_config
 
 cfg = load_config(".env")
 cogs: list = [
-    "discord_bot.cogs.tracker.login",
-    "discord_bot.cogs.tracker.logout",
-    "discord_bot.cogs.tracker.shop",
+    # "discord_bot.cogs.tracker.login",
+    # "discord_bot.cogs.tracker.logout",
+    # "discord_bot.cogs.tracker.shop",
+    # пока что работает сама через раз, не всегда получает response в нормальном и адекватном виде
+
     "discord_bot.cogs.tracker.stats",
 
     "discord_bot.cogs.actions.actions",
 
     "discord_bot.cogs.events.close.create",
-    "discord_bot.cogs.events.new_member.new_member"
+    "discord_bot.cogs.events.new_member.new_member",
+
+    "discord_bot.cogs.twitch.take_role",
+    "discord_bot.cogs.twitch.streaming",
 ]
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix="?", help_command=None, intents=intents)
@@ -38,8 +45,10 @@ async def on_ready():
 
     await client.change_presence(
         status=discord.Status.online,
-        activity=discord.Game(
-            name=f'мониторю {qty_members} уродов'
+        activity=discord.Streaming(
+            name=f'мониторю {qty_members} уродов',
+            created_at=datetime.datetime.now().timestamp(),
+            url="https://twitch.tv/kaidenvlr"
         )
     )
 
