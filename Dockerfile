@@ -1,10 +1,10 @@
-FROM python:3
+FROM python:3.10.4-alpine
 
-RUN mkdir -p /usr/src/bot
-WORKDIR /usr/src/bot
+WORKDIR /app
+
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD ["python3", "bot.py"]
+CMD ["python", "bot.py"]
