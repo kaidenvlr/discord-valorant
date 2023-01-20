@@ -33,6 +33,8 @@ class Role:
 @dataclass
 class Channel:
     close_channel: int
+    stream_channel: int
+    close_announcement_channel: int
 
 
 @dataclass
@@ -70,5 +72,9 @@ def load_config(path: str = None):
         ),
         Channel(
             close_channel=env.int("CLOSE_CHANNEL"),  # канал, в котором будут проводиться клозы 5х5
+            close_announcement_channel=env.int("CLOSE_ANNOUNCEMENT_CHANNEL"),
+            # канал, в который будут отпраляться анонсы 5х5
+
+            stream_channel=env.int("STREAM_ANNOUNCEMENT_CHANNEL"), # канал, в который будут отправляться анонсы стримов
         )
     )
