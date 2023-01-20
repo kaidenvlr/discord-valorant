@@ -11,6 +11,8 @@ async def message(bot: commands.Bot):
     guild = bot.get_guild(cfg.guild.guild_id)
     announcement_channel = guild.get_channel(cfg.channels.stream_channel)
 
+    await announcement_channel.purge(limit=100)
+
     button = Button(label="Получить роль", style=discord.ButtonStyle.success, emoji="👍")
 
     async def button_callback(interaction: discord.Interaction):
