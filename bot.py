@@ -1,8 +1,7 @@
-import datetime
-
 import discord
 from discord.ext import commands
 
+from discord_bot.cogs.twitch.take_role import message
 from discord_bot.config import load_config
 
 cfg = load_config(".env")
@@ -17,9 +16,8 @@ cogs: list = [
     "discord_bot.cogs.actions.actions",
 
     "discord_bot.cogs.events.close.create",
-    "discord_bot.cogs.events.new_member.new_member",
+    # "discord_bot.cogs.events.new_member.new_member",
 
-    "discord_bot.cogs.twitch.take_role",
     "discord_bot.cogs.twitch.streaming",
 ]
 intents = discord.Intents.all()
@@ -43,12 +41,12 @@ async def on_ready():
         qty_members += len(guild.members)
         client.tree.clear_commands(guild=guild)
 
+    await message(client)
+
     await client.change_presence(
         status=discord.Status.online,
-        activity=discord.Streaming(
-            name=f'мониторю {qty_members} уродов',
-            created_at=datetime.datetime.now().timestamp(),
-            url="https://twitch.tv/kaidenvlr"
+        activity=discord.Activity(
+            name=f'мониторю {qty_members} джабджиков'
         )
     )
 
