@@ -6,9 +6,9 @@ from discord_bot.config import load_config
 
 cfg = load_config(".env")
 cogs: list = [
-    # "discord_bot.cogs.tracker.login",
-    # "discord_bot.cogs.tracker.logout",
-    # "discord_bot.cogs.tracker.shop",
+    "discord_bot.cogs.tracker.login",
+    "discord_bot.cogs.tracker.logout",
+    "discord_bot.cogs.tracker.shop",
     # пока что работает сама через раз, не всегда получает response в нормальном и адекватном виде
 
     "discord_bot.cogs.tracker.stats",
