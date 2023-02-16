@@ -1,4 +1,9 @@
-venv/*
-.idea/*
-
-/.env
+*.pyc
+.vscode/
+venv/
+data/*
+.idea/
+media/avatars/*
+media/profiles/*
+media/ranks/*
+media/templates/*
