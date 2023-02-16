@@ -1,0 +1,181 @@
+{
+    "commands": {
+        "login": {
+            "NAME": "вход",
+            "DESCRIPTION": "Войти с помощью аккаунта Риот",
+            "DESCRIBE": {
+                "username": "Введите ник!",
+                "password": "Введите пароль!"
+            },
+            "SUCCESS": "Вы вошли",
+            "FAILED": "Не удалось войти, попробуйте снова"
+        },
+        "logout": {
+            "NAME": "выход",
+            "DESCRIPTION": "Выйти и удалить свой аккаунт из базы данных",
+            "SUCCESS": "Успешно вышли из аккаунта!",
+            "FAILED": "Не получилось выйти, попробуйте снова!"
+        },
+        "store": {
+            "NAME": "магазин",
+            "DESCRIPTION": "Показывает ваш ежедневный магазин в ваших аккаунтах",
+            "DESCRIBE": {
+                "username": "Введите ник! (временный вход)",
+                "password": "Введите ник! (временный вход)"
+            },
+            "RESPONSE": "Ежедневный магазин {username}, Осталось времени до смены: {duration}"
+        },
+        "point": {
+            "NAME": "поинт",
+            "DESCRIPTION": "Просмотри оставшиеся Валорант или Радианит Поинты",
+            "POINT": "Поинты"
+        },
+        "mission": {
+            "NAME": "миссия",
+            "DESCRIPTION": "Просмотреть ваш прогресс по дневным/еженедельным Миссиям",
+            "TITLE": "Миссия",
+            "DAILY": "Ежедневные",
+            "WEEKLY": "Еженедельно",
+            "NEWPLAYER": "Миссии Нового Игрока",
+            "NO_MISSION": "У вас нет активных миссий на данный момент",
+            "DAILY_RESET": "Сброс через {duration}",
+            "REFILLS": "Восполняется через {duration}"
+        },
+        "nightmarket": {
+            "NAME": "найтмаркет",
+            "DESCRIPTION": "Показивает ваши скины на найтмаркете",
+            "RESPONSE": "Найтмаркет {username}, Осталось времени до смены: {duration}",
+            "NIGMARKET_HAS_END": "**НайтМаркет** завершен"
+        },
+        "battlepass": {
+            "NAME": "боевой пропуск",
+            "DESCRIPTION": "Просмотреть ваш баттлпасс",
+            "RESPONSE": "**Следующая награда:** {next}\n**Тип награды:** {type}\n**Очки опыта:** {xp}\n**КОНЕЦ АКТА:** {end}",
+            "TIER": "Уровень",
+            "PLAYER_CARD": "Карточка игрока",
+            "SPRAY": "Графити",
+            "BUDDY": "Брелок",
+            "POINT": "Очко",
+            "PLAYER_TITLE": "Титул",
+            "SKIN": "Скин"
+        },
+        "notify_add": {
+            "NAME": "добавить",
+            "DESCRIPTION": "Включив, отправит уведомление когда выбранный вами скин появится в вашем магазине",
+            "DESCRIBE": {
+                "skin": "Имя желанного скина"
+            },
+            "SUCCESS": "Уведомление для {emoji} **{skin}** успешно установлено",
+            "SKIN_ALREADY_IN_LIST": "{emoji} **{skin}** уже добавлен в ваш список уведомлений",
+            "NOT_FOUND": "Скин не найден",
+            "REMOVE_NOTIFY": "Удалить уведомление",
+            "REMOVED_NOTIFY": "**{skin}** теперь не отсылает уведомления"
+        },
+        "notify_list": {
+            "NAME": "список",
+            "DESCRIPTION": "Показывает скины, которые вы включили в список уведомлений.",
+            "TITLE": "Ваш список уведомлений.",
+            "DONT_HAVE_NOTIFY": "У вас нет ни одного уведомления",
+            "REMOVE_NOTIFY": "Нажмите кнопку, чтобы удалить уведомление"
+        },
+        "notify_mode": {
+            "NAME": "тип",
+            "DESCRIPTION": "Меняет тип уведомления",
+            "DESCRIBE": {
+                "mode": "Тип уведомлений, на который вы хотите сменить"
+            },
+            "SUCCESS": "Вы успешно сменили ваш тип уведомлений на **{mode}**",
+            "TURN_OFF": "Выключает тип уведомления"
+        },
+        "notify_test": {
+            "NAME": "тест",
+            "DESCRIPTION": "Тест уведомления",
+            "NOTIFY_IS_WORKING": "Уведомление работает",
+            "NOTIFY_TURN_OFF": "Вы не включили тип уведомления",
+            "EMPTY_LIST": "Список уведомлений пуст",
+            "BOT_MISSING_PERM": "**У меня нет прав, чтобы присылать уведомления в этот канал!** \nпосмотрите права бота, точнее `View channel`, `Send messages`, `Embed links` and `Use external emoji`. в этом канале, а затем используйте `/notify test`.",
+            "FAILED_SEND_NOTIFY": "Ошибка при отправке уведомления, попробуйте снова",
+            "PLEASE_ALLOW_DM_MESSAGE": "Разрешите отправку сообщений в лс, чекните настройки приватности"
+        },
+        "notify_send": {
+            "RESPONSE_SPECIFIED": "{emoji} **{name}** в вашем магазине!\nОсталось {duration}",
+            "RESPONSE_ALL": "Текущий магазин для **{username}** | Осталось {duration}"
+        },
+        "notify_channel": {
+            "NAME": "канал",
+            "DESCRIPTION": "Смена канала уведомлений.",
+            "DESCRIBE": {
+                "channel": "Выберите канал, на который будут отправляться уведомления."
+            },
+            "SUCCESS": "Канал уведомлений сменен на: **{channel}**"
+        },
+        "bundle": {
+            "NAME": "набор",
+            "DESCRIPTION": "Показывает прогресс набора",
+            "DESCRIBE": {
+                "bundle": "Название набора, который вы хотите посмотреть!"
+            },
+            "TITLE": "Коллекция",
+            "DROPDOWN_CHOICE_TITLE": "Выберите набор:",
+            "NOT_FOUND_BUNDLE": "Набор не найден"
+        },
+        "bundles": {
+            "NAME": "наборы",
+            "DESCRIPTION": "Показывает прогресс набора",
+            "TITLE": "Текущий бандл: {bundle} коллекция",
+            "DURATION": "Осталось {duration}",
+            "DROPDOWN_CHOICE_TITLE": "Выберите бандл:"
+        },
+        "debug": {
+            "NAME": "debug",
+            "DESCRIPTION": "The command debug for the bot",
+            "DESCRIBE": {
+                "bug": "The bug you want to fix.",
+                "choice": {
+                    "skin_price_not_loading": "Skin price not loading",
+                    "emoji_price_not_loading": "Emoji not loading",
+                    "cache_price_not_loading": "Cache not loading"
+                }
+            },
+            "SUCCESS": "Successfully debuged: **{bug}**"
+        }
+    },
+    "cookies": {
+      "NAME": "cookies",
+      "DESCRIPTION": "Войти в ваш Riot аккаунт используя куки",
+      "DESCRIBE": {
+        "cookie": "Ваши куки"
+      },
+      "SUCCESS": "Успешная авторизация",
+      "FAILED": "Неправильные куки-данные"
+    },
+    "errors": {
+        "UNKNOW_ERROR": "произошла неизвестная ошибка.",
+        "AUTH": {
+            "INVALID_PASSWORD": "Ваши логин/пароль могут быть неверные!",
+            "RATELIMIT": "Подождите пару минут, и попробуйте снова.",
+            "COOKIES_EXPIRED": "у куки-данных истек срок действия, используйте `/login` снова.",
+            "NO_NAME_TAG": "Этот пользователь не существует.",
+            "REGION_NOT_FOUND": "произошла неизвестная ошибка, попробуйте `/login` снова",
+            "LOGIN_COOKIE_FAILED": "Вход через куки зафейлился",
+            "INPUT_2FA_CODE": "введите код двухфакторки!",
+            "2FA_ENABLE": "у вас включена двухфакторка!",
+            "2FA_TO_EMAIL": "вам отправили код",
+            "2FA_INVALID_CODE": "Код неверен. Напишите /login снова"
+        },
+        "DATABASE": {
+            "NOT_LOGIN": "вы не зарегистрированы в нашей системе! Напишите /login чтобы зарегистрироваться!",
+            "LOGIN_ERROR": "Не удалось войти, попробуйте снова!",
+            "LOGOUT_ERROR": "Вы не можете выйти из системы, если вы не зарегистрированы!",
+            "LOGOUT_EXCEPT": "Произошла ошибка при выходе из учетной записи."
+        },
+        "API": {
+            "FAILED_ACTIVE": "Не удалось активировать API",
+            "REQUEST_FAILED": "Ошибка ответа API!"
+        },
+        "SETUP_EMOJI": {
+            "MISSING_PERM": "У вас нет прав, чтобы создать смайлик!",
+            "FAILED_CREATE_EMOJI": "Я не могу создать эмодзи попробуйте снова"
+        }
+    }
+}
